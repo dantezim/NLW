@@ -99,8 +99,7 @@ const questions = [
   {
   const quizItem = template.content.cloneNode(true);
   quizItem.querySelector('h3').textContent = item.question;
-  quiz.appendChild(quizItem); // Coloca a pergunta na tela
-  
+
   for(let answer of item.answers){
     const dt = quizItem.querySelector('dl dt').cloneNode(true);
     dt.querySelector('span').textContent = answer;
@@ -109,5 +108,8 @@ const questions = [
   }
   
   quizItem.querySelector('dl dt').remove;
+  
+  quiz.appendChild(quizItem); // Coloca a pergunta na tela
+
   
   }
